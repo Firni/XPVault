@@ -1,0 +1,29 @@
+name: XPVault
+main: de.firni.XPVault.XPVault
+author: Firni
+version: 0.0.1
+depend: [Vault]
+description: >
+             A Bank for storing XP!
+commands:
+      xpvault:
+           description: TODO
+           usage: /xpvault [show]
+           permission: xpvault.xp.show
+           permission-message: No enough permissions!
+permissions:
+      xpvault.*:
+           description: Gives access to all XPVault commands
+           children:
+                xpvault.help: true
+                xpvault.xp.show: true
+                xpvault.xp.show.other: true
+      xpvault.help:
+           description: Allows you to show the help
+           default: true
+      xpvault.xp.show:
+           description: Allows you to show your actual XP
+           default: true
+      xpvault.xp.show.other:
+           description: Allows you to show other Players actual XP
+           default: op
